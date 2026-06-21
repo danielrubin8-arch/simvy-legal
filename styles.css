@@ -1,0 +1,216 @@
+/* ──────────────────────────────────────────────────────────
+   Simvy — מסמכים משפטיים | עיצוב משותף
+   RTL עברית, מינימלי, רספונסיבי, ללא תלות בספריות חיצוניות.
+   קל לעריכה: כל התוכן ב-HTML, כל העיצוב כאן.
+   ────────────────────────────────────────────────────────── */
+
+:root {
+  --bg:        #f7f8fa;
+  --surface:   #ffffff;
+  --text:      #1a2230;
+  --muted:     #5b6678;
+  --border:    #e4e8ee;
+  --accent:    #2563eb;
+  --accent-2:  #1e40af;
+  --warn-bg:   #fff7e6;
+  --warn-bd:   #f5d58a;
+  --warn-tx:   #6b4e0a;
+  --danger:    #b42318;
+  --maxw:      720px;
+  --radius:    14px;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  /* RTL הוא חוק */
+  direction: rtl;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", "Heebo", "Assistant", "Arial", system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.75;
+  text-align: right;
+}
+
+/* פס עליון */
+.topbar {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.topbar .inner {
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding: 16px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.brand {
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: -0.2px;
+  color: var(--text);
+  text-decoration: none;
+}
+.brand span { color: var(--accent); }
+.topnav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+  margin-inline-start: 14px;
+}
+.topnav a:hover { color: var(--accent); }
+
+/* תוכן */
+main {
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding: 28px 22px 64px;
+}
+
+.doc-title {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+  margin: 14px 0 4px;
+}
+.updated {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0 0 24px;
+}
+
+h2 {
+  font-size: 21px;
+  font-weight: 700;
+  margin: 34px 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 20px 0 6px;
+  color: var(--text);
+}
+p { margin: 0 0 14px; }
+ul { margin: 0 0 14px; padding-inline-start: 22px; }
+li { margin: 0 0 8px; }
+
+a { color: var(--accent); }
+a:hover { color: var(--accent-2); }
+
+/* placeholder גלוי שצריך למלא לפני פרסום */
+.placeholder {
+  background: #fde68a;
+  color: #6b4e0a;
+  padding: 1px 7px;
+  border-radius: 6px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* תיבת אזהרה / הבהרה */
+.callout {
+  background: var(--warn-bg);
+  border: 1px solid var(--warn-bd);
+  color: var(--warn-tx);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  margin: 0 0 24px;
+  font-size: 15.5px;
+}
+.callout strong { color: var(--warn-tx); }
+
+/* תיבת צעדים / קשר */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  margin: 0 0 22px;
+}
+.steps { counter-reset: step; list-style: none; padding: 0; margin: 0; }
+.steps li {
+  position: relative;
+  padding-inline-start: 42px;
+  margin-bottom: 14px;
+  min-height: 30px;
+}
+.steps li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0;
+  width: 28px; height: 28px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 700;
+}
+
+.contact {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+/* התראת מחיקה */
+.danger-note {
+  border-color: #f3c2bd;
+  background: #fef3f2;
+  color: var(--danger);
+}
+
+/* כותרת תחתית */
+footer {
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+}
+footer .inner {
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding: 22px;
+  color: var(--muted);
+  font-size: 13.5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  align-items: center;
+  justify-content: space-between;
+}
+footer a { color: var(--muted); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+.footlinks a { margin-inline-start: 16px; }
+
+/* תמיכת מובייל */
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  .doc-title { font-size: 25px; }
+  h2 { font-size: 19px; }
+  main { padding: 22px 18px 52px; }
+  .topnav a { margin-inline-start: 10px; font-size: 13px; }
+}
+
+/* קישור "דלג לתוכן" לנגישות */
+.skip {
+  position: absolute;
+  inset-inline-start: -9999px;
+}
+.skip:focus {
+  inset-inline-start: 12px;
+  top: 12px;
+  background: var(--accent);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  z-index: 10;
+}
