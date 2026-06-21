@@ -107,16 +107,6 @@ li { margin: 0 0 8px; }
 a { color: var(--accent); }
 a:hover { color: var(--accent-2); }
 
-/* placeholder גלוי שצריך למלא לפני פרסום */
-.placeholder {
-  background: #fde68a;
-  color: #6b4e0a;
-  padding: 1px 7px;
-  border-radius: 6px;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
 /* תיבת אזהרה / הבהרה */
 .callout {
   background: var(--warn-bg);
