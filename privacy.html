@@ -4,8 +4,59 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>מדיניות פרטיות — Simvy</title>
-  <meta name="description" content="מדיניות הפרטיות של אפליקציית Simvy — איזה מידע נאסף, כיצד אנו משתמשים בו, ומהן זכויותיך.">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="מדיניות הפרטיות של אפליקציית Simvy — איזה מידע נאסף, כיצד הוא נשמר ומשמש, ומהן זכויותיך.">
+  <style>
+    :root{
+      --bg:#f7f8fa; --surface:#ffffff; --text:#1a2230; --muted:#5b6678;
+      --border:#e4e8ee; --accent:#2563eb; --accent-2:#1e40af;
+      --warn-bg:#fff7e6; --warn-bd:#f5d58a; --warn-tx:#6b4e0a;
+      --danger:#b42318; --maxw:720px; --radius:14px;
+    }
+    *{ box-sizing:border-box; }
+    html{ direction:rtl; -webkit-text-size-adjust:100%; }
+    body{
+      margin:0; background:var(--bg); color:var(--text);
+      font-family:"Segoe UI","Heebo","Assistant","Arial",system-ui,sans-serif;
+      font-size:17px; line-height:1.75; text-align:right;
+    }
+    .topbar{ background:var(--surface); border-bottom:1px solid var(--border); }
+    .topbar .inner{
+      max-width:var(--maxw); margin-inline:auto; padding:16px 22px;
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+    }
+    .brand{ font-weight:800; font-size:20px; letter-spacing:-0.2px; color:var(--text); text-decoration:none; }
+    .brand span{ color:var(--accent); }
+    .topnav a{ color:var(--muted); text-decoration:none; font-size:14px; margin-inline-start:14px; }
+    .topnav a:hover{ color:var(--accent); }
+    main{ max-width:var(--maxw); margin-inline:auto; padding:28px 22px 64px; }
+    .doc-title{ font-size:30px; font-weight:800; letter-spacing:-0.4px; margin:14px 0 4px; }
+    .updated{ color:var(--muted); font-size:14px; margin:0 0 24px; }
+    h2{ font-size:21px; font-weight:700; margin:34px 0 10px; padding-bottom:6px; border-bottom:1px solid var(--border); scroll-margin-top:16px; }
+    h3{ font-size:17px; font-weight:700; margin:20px 0 6px; color:var(--text); }
+    p{ margin:0 0 14px; }
+    ul{ margin:0 0 14px; padding-inline-start:22px; }
+    li{ margin:0 0 8px; }
+    a{ color:var(--accent); }
+    a:hover{ color:var(--accent-2); }
+    footer{ border-top:1px solid var(--border); background:var(--surface); }
+    footer .inner{
+      max-width:var(--maxw); margin-inline:auto; padding:22px; color:var(--muted);
+      font-size:13.5px; display:flex; flex-wrap:wrap; gap:6px 18px;
+      align-items:center; justify-content:space-between;
+    }
+    footer a{ color:var(--muted); text-decoration:none; }
+    footer a:hover{ color:var(--accent); }
+    .footlinks a{ margin-inline-start:16px; }
+    .skip{ position:absolute; inset-inline-start:-9999px; }
+    .skip:focus{ inset-inline-start:12px; top:12px; background:var(--accent); color:#fff; padding:8px 14px; border-radius:8px; z-index:10; }
+    @media (max-width:560px){
+      body{ font-size:16px; }
+      .doc-title{ font-size:25px; }
+      h2{ font-size:19px; }
+      main{ padding:22px 18px 52px; }
+      .topnav a{ margin-inline-start:10px; font-size:13px; }
+    }
+  </style>
 </head>
 <body>
   <a class="skip" href="#main">דלג לתוכן</a>
@@ -23,87 +74,85 @@
 
   <main id="main">
     <h1 class="doc-title">מדיניות פרטיות</h1>
-    <p class="updated">עדכון אחרון: 21 ביוני 2026</p>
+    <p class="updated">עודכן לאחרונה: 24 ביוני 2026</p>
 
-    <div class="callout">
-      <strong>הבהרה:</strong> Simvy היא אפליקציה לחינוך וסימולציה פיננסית בלבד. היא אינה מספקת ייעוץ השקעות, והשימוש בה הוא על אחריות המשתמש בלבד.
-    </div>
-
-    <h2>1. מבוא וזהות המפעיל</h2>
+    <h2>1. כללי</h2>
     <p>
-      אפליקציית Simvy ("אנחנו", "האפליקציה") מופעלת על ידי דניאל רובין רוקוטניץ.
-      מדיניות זו מסבירה איזה מידע אנו אוספים, כיצד אנו משתמשים בו, ומהן זכויותיך.
-      לפניות בנושא פרטיות: <a href="mailto:simvysupport@gmail.com">simvysupport@gmail.com</a>.
+      מדיניות זו מסבירה איזה מידע נאסף עליך באפליקציית Simvy ("האפליקציה"), כיצד הוא נשמר ומשמש, ומהן זכויותיך.
+      האפליקציה מופעלת על ידי <strong>דניאל רוקוטניץ רובין</strong> (להלן: "המפעיל" או "אנחנו").
+      ערוץ הקשר לפניות הוא דוא"ל: <a href="mailto:simvysupport@gmail.com">simvysupport@gmail.com</a>.
+      השימוש באפליקציה מהווה הסכמה למדיניות זו.
     </p>
 
-    <h2>2. איזה מידע אנו אוספים</h2>
-
-    <h3>מידע שאתה מספק לנו</h3>
+    <h2>2. איזה מידע נאסף</h2>
+    <h3>מידע שאתה מספק או שמתקבל מספק ההתחברות:</h3>
     <ul>
-      <li><strong>בעת הרשמה/onboarding:</strong> שם פרטי, שם משפחה, גיל, מגדר, עיר מגורים (אופציונלי), שם משתמש.</li>
-      <li><strong>במסלול הרשמה באימייל:</strong> כתובת אימייל וסיסמה (הסיסמה נשמרת בצורה מוצפנת/hash, איננו רואים אותה).</li>
-      <li><strong>העדפות למידה:</strong> רמת היכרות עם השוק, מטרת הלמידה, וכיצד שמעת עלינו (אופציונלי).</li>
+      <li>שם וכתובת דוא"ל — מתקבלים מ-Google או Apple בעת ההתחברות (איננו מבקשים סיסמה ואיננו שומרים אותה).</li>
+      <li>תשובות שלב ההיכרות (Onboarding), לרבות רמת הידע שדיווחת.</li>
+      <li>רשומת הסכמתך לתנאי השימוש ולמדיניות זו (גרסה ומועד).</li>
     </ul>
-
-    <h3>מידע מהתחברות חברתית</h3>
-    <p>בעת התחברות עם Google או Apple, אנו מקבלים מהספק את שמך וכתובת אימייל מאומתת.</p>
-
-    <h3>מידע על השימוש שלך</h3>
-    <p>התקדמות בשיעורים, ציוני מבחנים, מועד ונוסח ההסכמה שאישרת לתנאים, והעדפות תצוגה (תמה).</p>
-
-    <h3>מידע טכני אוטומטי</h3>
-    <p>סוג המכשיר ומערכת ההפעלה, גרסת האפליקציה, ונתוני קריסות/לוגים לצורך יציבות ושיפור.</p>
-
-    <h3>מה איננו אוספים</h3>
-    <p>איננו אוספים נתוני תשלום (אין כיום רכישות באפליקציה), ואין באפליקציה כסף אמיתי, חשבונות מסחר או חיבור לברוקר.</p>
-
-    <h2>3. למה אנו משתמשים במידע</h2>
+    <h3>מידע שנוצר מהשימוש שלך:</h3>
     <ul>
-      <li>להפעיל את חוויית הלמידה והמשחוק ולשמור את התקדמותך.</li>
-      <li>להתאים את מסלול הלמידה לרמתך ולמטרתך (התאמה חינוכית בלבד — לא המלצות השקעה).</li>
-      <li>למתן תמיכה ומענה לפניות.</li>
-      <li>לשיפור המוצר באמצעות אנליטיקה פנימית מצרפית.</li>
+      <li>התקדמות לימודית: שיעורים שהושלמו, ציונים, משך למידה ורצף ימים (סטריקס).</li>
+      <li>פניות תמיכה ומשוב שתשלח.</li>
     </ul>
-
-    <h2>4. שיתוף מידע והעברה אל מחוץ לישראל</h2>
-    <p>איננו מוכרים מידע אישי למפרסמים או לצדדים שלישיים.</p>
+    <h3>מידע טכני:</h3>
+    <ul>
+      <li>מזהי התחברות ואסימוני הזדהות (לצורך שמירת המשך החיבור).</li>
+    </ul>
     <p>
-      המידע מאוחסן בשרתי Supabase, העשויים להיות ממוקמים מחוץ לישראל, וההתחברות מאומתת על ידי Google/Apple.
-      לפיכך ייתכן שמידע אישי יועבר ויאוחסן בשרתים מאובטחים מחוץ לישראל, בכפוף לאמצעי הגנה מקובלים.
+      איננו אוספים מידע פיננסי אישי, פרטי חשבונות בנק או מספרי כרטיסי אשראי.
+      <em>(בגרסה הנוכחית אין רכיב תשלום פעיל; כשיופעל — תעודכן מדיניות זו.)</em>
     </p>
-    <p>נחשוף מידע רק אם נידרש לכך על פי דין או צו שיפוטי.</p>
+
+    <h2>3. למה אנחנו משתמשים במידע</h2>
+    <p>
+      לאספקת השירות והצגת תוכן; לשמירת ההתקדמות שלך והצגת סטטיסטיקות; לאימות זהותך והתחברות מאובטחת;
+      למענה לפניות תמיכה; ולשיפור האפליקציה. הבסיס לעיבוד הוא הסכמתך והצורך לספק לך את השירות שביקשת.
+    </p>
+
+    <h2>4. שיתוף מידע עם צדדים שלישיים והעברה לחו"ל</h2>
+    <p>איננו מוכרים את המידע שלך. אנו נעזרים בספקי שירות הכרחיים בלבד:</p>
+    <ul>
+      <li><strong>Supabase</strong> — תשתית אחסון ובסיס נתונים שבה נשמר המידע.</li>
+      <li><strong>Google / Apple</strong> — אימות זהות בעת ההתחברות.</li>
+    </ul>
+    <p>
+      המידע נשמר על שרתי Supabase הממוקמים ב<strong>פרנקפורט, גרמניה (בתוך האיחוד האירופי)</strong>,
+      כלומר המידע מועבר ומאוחסן מחוץ לישראל. בעצם השימוש אתה מסכים להעברה זו.
+      נמסור מידע גם אם נחויב לכך על פי דין או צו שיפוטי.
+    </p>
 
     <h2>5. אבטחת מידע</h2>
     <p>
-      אנו נוקטים אמצעים מקובלים (הצפנת תקשורת, בקרת גישה ברמת שורה ב-DB, אחסון מאובטח של אסימוני התחברות).
-      יחד עם זאת, אין מערכת מאובטחת לחלוטין, ואיננו יכולים להבטיח אבטחה מוחלטת.
+      אנו נוקטים אמצעים סבירים להגנה על המידע, לרבות הצפנת תעבורה ובקרת גישה ברמת השורה (RLS)
+      המבטיחה שכל משתמש ניגש רק לנתונים שלו. עם זאת, אין מערכת חסינה לחלוטין.
+      <strong>מובהר כי המפעיל לא יישא באחריות לכל נזק או זליגת מידע שייגרמו כתוצאה מפריצת אבטחה, כשל טכני או חדירה בשרתי צד שלישי (כגון Supabase או ספקי ההתחברות) שאינם בשליטתו הישירה.</strong>
     </p>
 
-    <h2>6. זכויותיך</h2>
-    <p><strong>עיון ותיקון:</strong> באפשרותך לעיין במידע שלך ולעדכן אותו דרך האפליקציה.</p>
+    <h2 id="delete-account">6. שמירת מידע ומחיקה ("הזכות להישכח")</h2>
     <p>
-      <strong>מחיקה ("הזכות להישכח"):</strong> באפשרותך למחוק את חשבונך לחלוטין דרך הגדרות האפליקציה
-      (כפתור "מחיקת חשבון"), או דרך <a href="delete-account.html">דף מחיקת החשבון</a>.
-      מחיקת החשבון מסירה את כל נתוניך ממערכותינו.
-    </p>
-    <p>לפניות בנושא זכויותיך: <a href="mailto:simvysupport@gmail.com">simvysupport@gmail.com</a>.</p>
-
-    <h2>7. שמירת מידע</h2>
-    <p>נשמור את המידע כל עוד חשבונך פעיל. עם מחיקת החשבון, המידע יימחק (למעט מידע שאנו מחויבים לשמור על פי דין).</p>
-
-    <h2>8. קטינים</h2>
-    <p>השירות מיועד למשתמשים מגיל 18 ומעלה. איננו אוספים ביודעין מידע ממשתמשים מתחת לגיל 18.</p>
-
-    <h2>9. הדין החל</h2>
-    <p>
-      מדיניות זו כפופה לחוק הגנת הפרטיות הישראלי, לרבות תיקון 13.
-      משתמשים באיחוד האירופי נהנים מהזכויות המוקנות להם לפי תקנת ה-GDPR.
+      אנו שומרים את המידע כל עוד חשבונך פעיל.
+      <strong>תוכל למחוק את חשבונך ונתוניך לחלוטין מתוך הגדרות האפליקציה, או לחלופין — גם אם הסרת את האפליקציה מהמכשיר — על ידי שליחת בקשת מחיקה לדוא"ל <a href="mailto:simvysupport@gmail.com">simvysupport@gmail.com</a>.</strong>
+      מחיקה זו תסיר לצמיתות את הנתונים האישיים המשויכים אליך, למעט מידע שאנו מחויבים לשמור על פי דין.
     </p>
 
-    <h2>10. שינויים במדיניות</h2>
+    <h2>7. זכויותיך</h2>
     <p>
-      נעדכן מדיניות זו מעת לעת ונפרסם את תאריך העדכון.
-      שימוש מתמשך באפליקציה לאחר עדכון מהווה הסכמה למדיניות המעודכנת.
+      בהתאם לחוק הגנת הפרטיות, התשמ"א-1981 (לרבות תיקון 13), עומדות לך הזכויות לעיין במידע שעליך,
+      לבקש תיקון מידע שגוי, ולבקש מחיקה. לממש זכויות אלה — פנה אל <a href="mailto:simvysupport@gmail.com">simvysupport@gmail.com</a>.
+    </p>
+
+    <h2>8. גיל</h2>
+    <p>
+      האפליקציה מיועדת למשתמשים מגיל 18 ומעלה בלבד. איננו אוספים ביודעין מידע מקטינים;
+      אם נודע לנו על כך, נמחק את המידע לאלתר.
+    </p>
+
+    <h2>9. שינויים ויצירת קשר</h2>
+    <p>
+      נעדכן מדיניות זו מעת לעת. שינוי מהותי יפורסם באפליקציה. המשך שימוש לאחר עדכון מהווה הסכמה לנוסח המעודכן.
+      לשאלות בנושא פרטיות: <a href="mailto:simvysupport@gmail.com">simvysupport@gmail.com</a>.
     </p>
   </main>
 
@@ -112,7 +161,7 @@
       <span>© 2026 Simvy · חינוך וסימולציה פיננסית בלבד</span>
       <span class="footlinks">
         <a href="privacy.html">פרטיות</a>
-        <a href="terms.html">תקנון</a>
+        <a href="terms.html">תנאי שימוש</a>
         <a href="delete-account.html">מחיקת חשבון</a>
       </span>
     </div>
